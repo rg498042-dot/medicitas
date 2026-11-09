@@ -1,7 +1,7 @@
 # MediCitas
 
 Sistema sencillo de gestión de citas e historial de pacientes para una clínica, desarrollado en **PHP 8 + MySQL** (sin frameworks).
-Trabajo Grupal II de Ingeniería de Software · ISAE Universidad.
+ Ingeniería de Software · ISAE Universidad.
 
 ## Funciones (casos de uso)
 
