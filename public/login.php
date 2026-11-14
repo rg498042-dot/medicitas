@@ -51,18 +51,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         redirigir('index.php');
     }
 }
+
 $titulo = 'Iniciar sesión';
 require __DIR__ . '/../inc/header.php';
 ?>
-<div class="tarjeta login">
-  <?php if ($error): ?><div class="aviso error"><?= h($error) ?></div><?php endif; ?>
-  <form method="post">
-    <?= csrf_field() ?>
-    <label>Usuario</label>
-    <input name="usuario" value="<?= h($_POST['usuario'] ?? '') ?>" autofocus>
-    <label>Contraseña</label>
-    <input type="password" name="clave">
-    <p><button>Ingresar</button></p>
-  </form>
+<div class="login-wrap">
+  <div class="tarjeta login">
+    <div class="login-logo"><img src="img/logo.svg" alt="MediCitas" width="56" height="56"></div>
+    <?php if ($error): ?><div class="aviso error"><?= h($error) ?></div><?php endif; ?>
+    <form method="post">
+      <?= csrf_field() ?>
+      <label>Usuario</label>
+      <input name="usuario" value="<?= h($_POST['usuario'] ?? '') ?>" autofocus>
+      <label>Contraseña</label>
+      <input type="password" name="clave">
+      <p><button>Ingresar</button></p>
+    </form>
+  </div>
 </div>
 <?php require __DIR__ . '/../inc/footer.php'; ?>
+
