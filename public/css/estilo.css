@@ -32,3 +32,49 @@ button.sec,.btn.sec{background:#6b7c8d}
 .estado{padding:.1rem .5rem;border-radius:10px;font-size:.85rem;background:#e3e8ee}
 .estado.programada{background:#d9ecff}.estado.atendida{background:#dff5e3}.estado.cancelada{background:#fde2e2}.estado.no_asistio{background:#fff1cc}
 .login{max-width:380px;margin:3rem auto}
+
+/* ---------- Imágenes e íconos ---------- */
+.ico{vertical-align:middle;flex-shrink:0}
+.logo{display:flex;align-items:center;gap:.5rem}
+.barra nav a{display:inline-flex;align-items:center;gap:.3rem}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:linear-gradient(120deg,#e3f1fb,#fff);border-radius:12px;padding:1rem 1.5rem;margin-bottom:1rem;box-shadow:0 1px 3px #0002}
+.hero img{max-width:200px;height:auto}
+.hero-fecha{font-weight:700;color:#0b5c8f;margin:0 0 .3rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1rem}
+.stat{display:flex;align-items:center;gap:.8rem;background:#fff;border-radius:10px;padding:1rem;box-shadow:0 1px 3px #0002;color:#0b5c8f}
+.stat strong{display:block;font-size:1.6rem;color:#1f2d3d;line-height:1}
+.stat span{font-size:.9rem;color:#5b6b7b}
+.menu a{display:flex;flex-direction:column;gap:.3rem;transition:transform .15s,box-shadow .15s}
+.menu a:hover{transform:translateY(-3px);box-shadow:0 6px 14px #0b5c8f33}
+.menu a small{font-weight:400;color:#5b6b7b}
+.login-wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem;margin:2rem auto;max-width:900px}
+.login-img{flex:1;min-width:260px;text-align:center}
+.login-img img{max-width:100%;height:auto}
+.login-img h2{margin:.5rem 0 .2rem;color:#0b5c8f}
+.login-img p{margin:0;color:#5b6b7b}
+.login-wrap .login{flex:0 0 340px;margin:0}
+.login-logo{text-align:center;margin-bottom:.5rem}
+@media (max-width:640px){.hero img{display:none}}
+
+/* Fotos reales (opcionales) */
+.foto{border-radius:14px;box-shadow:0 6px 18px #0003;object-fit:cover}
+.login-img img.foto{width:100%;max-height:320px}
+.hero img.foto{width:240px;max-width:240px;height:150px}
+
+/* ---------- Fondos con imagen (opcionales) ---------- */
+/* Pantallas internas: public/img/fondo.jpg con una capa clara para que se lea el texto */
+body.interna{background:#f4f7fa url('../img/fondo.jpg') center/cover fixed no-repeat}
+body.interna::before{content:"";position:fixed;inset:0;background:rgba(247, 247, 247, 0.30);z-index:-1}
+/* Login: public/img/fondo-login.jpg (si no existe, usa fondo.jpg) con una capa azul oscura */
+body.pagina-login{background:url('../img/fondo-login.jpg') center/cover fixed no-repeat,url('../img/fondo.jpg') center/cover fixed no-repeat #0b5c8f}
+body.pagina-login::before{content:"";position:fixed;inset:0;background:rgba(7,63,99,.35);z-index:-1}
+body.pagina-login .login-img h2,body.pagina-login .login-img p{color:#fff}
+body.pagina-login .pie{color:#e6eef5}
+body.interna .pie{color:#334}
+
+/* Login centrado (sin imagen lateral) */
+body.pagina-login main{min-height:75vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+body.pagina-login h1{color:#fff;text-align:center}
+body.pagina-login .login-wrap{margin:0}
+body.pagina-login .login{width:340px;max-width:100%}
+body.pagina-login .aviso{width:340px;max-width:100%} 
