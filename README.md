@@ -45,22 +45,12 @@ Trabajo Grupal II de Ingeniería de Software · ISAE Universidad.
 3. Ingresa como recepcionista, registra pacientes y agenda citas.
 4. Ingresa como médico para atender las citas y consultar historiales.
 
-## Imágenes reales (opcional)
-
-Si colocas estas fotos en `public/img/`, el sistema las usa automáticamente; si no existen, muestra las ilustraciones SVG:
-
-- `login-foto.jpg`: foto de la pantalla de inicio de sesión (ancho aprox. 800 px)
-- `inicio-banner.jpg`: foto del banner de la pantalla principal (ancho aprox. 600 px)
-
-Fondos de pantalla (opcionales): `fondo.jpg` (pantallas internas) y `fondo-login.jpg` (inicio de sesión; si falta, usa `fondo.jpg`). Se recomiendan imágenes horizontales de 1600 px de ancho o más.
-
-Créditos de las fotos: (agregar autor y sitio de origen, por ejemplo Unsplash o Pexels).
 
 ## Reglas importantes
 
 - Un médico no puede tener dos citas programadas a la misma fecha y hora (validación en código y en la base de datos).
 - Las contraseñas se guardan con hash (`password_hash`) y los formularios usan token CSRF.
-- La sesión se cierra tras 15 minutos de inactividad (`inactividad_min` en `config/config.php`).
+- La sesión se cierra tras 5 minutos de inactividad (`inactividad_min` en `config/config.php`).
 - Las imágenes e íconos son SVG propios (`public/img/` y función `icono()`), sin dependencias externas.
 - `config/config.php` está en `.gitignore`: no se sube a GitHub.
 
